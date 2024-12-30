@@ -29,13 +29,7 @@ app.use(cors({ credentials: true, origin: 'http://localhost:5173' }));
 app.use(cookieParser());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-
-
-
-mongoose.connect('mongodb+srv://bhadauriahardick:VHcNlcuYYQV15nIP@cluster0.t2rgm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
-
-
-
+mongoose.connect('mongodb+srv://sharmaaniket48243:sharmaaniket48243@cluster0.ngp4s.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 
 app.post('/createemployee', uploadMiddleware.single('file'), async (req, res) => {
   let newPath = null;
